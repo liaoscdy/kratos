@@ -124,11 +124,6 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                                 <span><?php _e('标签：' , 'kratos'); ?></span>
                                 <?php if ( get_the_tags() ) { the_tags('', ' ', ''); } else{ echo '<a>' . __( '暂无' , 'kratos') . '</a>';  }?>
                             </div>
-                            <div class="tool float-right d-none d-lg-block">
-                                <div data-toggle="tooltip" data-html="true" data-original-title="<?php _e('最后更新：','kratos'); the_modified_date() ?>">
-                                    <span><?php _e('最后更新：','kratos'); ?><?php the_modified_date(); ?></span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 <?php endif; ?>

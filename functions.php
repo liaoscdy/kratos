@@ -40,3 +40,12 @@ require get_template_directory() . '/inc/theme-smtp.php';
 
 // 自定义函数
 require get_template_directory() . '/custom/custom.php';
+
+// 关闭更新提示
+add_filter('pre_site_transient_update_core',create_function('$a',"return null;"));
+add_filter('pre_site_transient_update_plugins',create_function('$a',"return null;"));
+add_filter('pre_site_transient_update_themes',create_function('$a',"return null;"));
+
+remove_action('admin_init','_maybe_update_core');
+remove_action('admin_init','_maybe_update_plugins');
+remove_action('admin_init','_maybe_update_themes');

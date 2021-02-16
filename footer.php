@@ -43,8 +43,9 @@
                 </p>
                 <?php
                     $sitename = get_bloginfo('name');
+                    $description_content = get_bloginfo('description');
+                    echo '<p>' . $description_content . '</p>';
                     echo '<p>' . kratos_option('s_copyright', 'COPYRIGHT © 2021 ' . $sitename . '. ALL RIGHTS RESERVED.') . '</p>';
-                    echo '<p>THEME <a href="https://github.com/vtrois/kratos" target="_blank" rel="nofollow">KRATOS</a> MADE BY <a href="https://www.vtrois.com/" target="_blank" rel="nofollow">VTROIS</a></p>';
                     if (kratos_option('s_icp')) {
                         echo '<p><a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">' . kratos_option('s_icp') . '</a></p>';
                     }
