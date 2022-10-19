@@ -36,9 +36,9 @@
             ?>
             <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
         </div>
-        <div class="content">
-            <p><?php echo wp_trim_words(get_the_excerpt(), 260); ?></p>
-        </div>
+        <article >
+            <?php the_content(); ?>
+        </article>
     </div>
     <div class="a-meta">
         <span class="float-left d-none d-md-block">
