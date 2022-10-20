@@ -36,6 +36,9 @@
             ?>
             <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
         </div>
+
+        <div class="a-meta"></div>
+
         <article >
             <?php the_content(); ?>
         </article>
@@ -55,9 +58,5 @@
             <?php } if (kratos_option('g_post_author', true)) { ?>
                 <span class="mr-2"><i class="kicon i-author"></i><?php echo get_the_author_meta('display_name'); ?></span>
             <?php } ?>
-        </span>
-        <span class="float-right">
-            <a href="<?php the_permalink(); ?>"><?php _e('阅读全文', 'kratos'); ?><i class="kicon i-rightbutton"></i></a>
-        </span>
     </div>
 </div>
