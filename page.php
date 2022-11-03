@@ -8,16 +8,20 @@
  */
 
 get_header(); ?>
-<div class="k-main <?php echo kratos_option('top_img_switch', true) ? 'banner' : 'color' ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
+<div class="k-main color" style="background:#f5f5f5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 details">
+            <div class="col-lg-12 details">
                 <?php if (have_posts()) : the_post();
                     update_post_caches($posts); ?>
                     <div class="article py-4">
-                        <div class="header text-center">
-                            <h1 class="title m-0"><?php the_title(); ?></h1>
+                        <div class="header">
+                            <h1 class="title"><?php the_title(); ?></h1>
+                            <div class="meta">
+                                <span><?php echo get_the_date(); ?></span>
+                            </div>
                         </div>
+
                         <div class="content">
                             <?php
                             the_content();
